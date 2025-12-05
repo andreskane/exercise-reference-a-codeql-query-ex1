@@ -22,7 +22,7 @@ jobs:
         uses: github/codeql-action/init@v1
         with:
           # Aquí se define la ruta a tu archivo de configuración
-          config-file: ./.github/codeql/codeql-config.yml
+          config-file: .github/codeql/codeql-config.yml
     
           # Otros parámetros que ya tengas (como languages)
           languages: ${{ matrix.language }}
