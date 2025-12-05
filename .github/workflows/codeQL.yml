@@ -20,6 +20,12 @@ jobs:
 
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v1
+        with:
+          # Aquí se define la ruta a tu archivo de configuración
+          config-file: ./.github/codeql/codeql-config.yml
+    
+          # Otros parámetros que ya tengas (como languages)
+          languages: ${{ matrix.language }}
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
